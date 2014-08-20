@@ -1,0 +1,10 @@
+//$getCustomerProfileResponse from above
+
+//Get the status
+$status = $getCustomerProfileResponse->status();
+
+//Get all cards stored for this customer
+$getCustomerProfileResponse->profileCards(); 
+
+...
+...

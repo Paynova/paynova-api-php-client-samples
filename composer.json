@@ -1,0 +1,20 @@
+{
+	"name" : "Paynova/paynova_api_php_client_samples",
+	"type" : "project",
+	"description" : "Paynova API PHP Client Samples",
+	"license" : "MIT",
+	"authors" : [{
+			"name" : "Paynova",
+			"homepage" : "http://www.paynova.com"
+		}
+	],
+	"autoload" : {
+		"psr-4" : {
+			"Paynova\\Paynova_api_php_client_samples\\" : "src"
+		}
+	},
+	"require" : {
+		"php" : ">=5.3",
+		"paynova/paynova_php" : "v2.0.0"
+	}
+}

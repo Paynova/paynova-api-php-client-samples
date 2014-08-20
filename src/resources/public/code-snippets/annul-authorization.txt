@@ -1,0 +1,17 @@
+... set the Paynova credentials
+
+$requestAnnulAuthorization = new RequestAnnulAuthorization($mockHttp);
+		$request->orderId("{orderId}")
+		->transactionId("{transactionId}")
+		->totalAmount("{totalAmount}");
+		
+$responseAnnulAuthorization = $requestAnnulAuthorization->request();
+
+if($responseAnnulAuthorization->status()->isSuccess()==1) {
+	//SUCCESS
+}else{
+	/*
+     * Use the status object to get the errors
+     * $responseAnnulAuthorization->status();
+    */
+}

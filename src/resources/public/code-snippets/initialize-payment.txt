@@ -1,0 +1,43 @@
+... set the Paynova credentials
+... Create Order the an order and get orderId ...
+
+$intializePaymentRequest = RequestInitializePayment::factory(array(
+	"orderId"=>"{orderId}",//Received from calling Create Order service
+	"totalAmount"=>100.00,
+	"paymentChannelId"=>RequestInitializePayment::PAYMENT_CHANNEL_WEB,
+	"interfaceOptions"=>array(
+		"interfaceId"=>InterfaceOptions::ID_AERO,
+		"customerLanguageCode"=>"swe",
+		"urlRedirectSuccess"=>"http:://your-url.com/success",
+		"urlRedirectCancel"=>"http:://your-url.com/cancel",
+		"urlRedirectPending"=>"http:://your-url.com/pending",
+		"urlCallback"=>"http:://your-url.com/callback"
+	),
+	"profilePaymentOptions"=>array(
+		"profileId" => "a-customer-123"
+	),
+	"lineItems" => array(
+			array(
+				"id" => "foo-123",
+				"articleNumber" => "foo-123",
+				"name" => "Foo line item name",
+				"quantity" => 1,
+				"unitMeasure" =>"st.",
+				"unitAmountExcludingTax" => 80.00,
+				"taxPercent" => 25,
+				"totalLineTaxAmount" =>20.00,
+				"totalLineAmount" => 100.00,
+			)
+		)
+));
+
+
+$initializePaymentResponse = $intializePaymentRequest->request();
+if($initializePaymentResponse->status()->isSuccess()==1) {
+	//SUCCESS - redirect the user to the payment process
+}else{
+	/*
+     * Use the status object to get the errors
+     * $initResponse->status();
+    */
+}

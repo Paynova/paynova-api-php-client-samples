@@ -1,0 +1,16 @@
+... set the Paynova credentials
+
+$removeCustomerProfileCardRequest = RequestRemoveCustomerProfile::factory(array(
+		"profileId"=>"{profileId}",
+		"cardId"=>"{cardId}"
+));
+$removeCustomerProfileCardResponse = $removeCustomerProfileCardRequest->request();
+
+if($removeCustomerProfileCardResponse->status()->isSuccess()) {
+	//SUCCESS
+}else{
+	/*
+     * Use the status object to get the errors
+     * $removeCustomerProfileCardResponse->status();
+    */
+}

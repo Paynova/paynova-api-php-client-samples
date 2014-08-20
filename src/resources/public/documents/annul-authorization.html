@@ -1,0 +1,42 @@
+<div class="row">
+    <div class="col-md-8">
+    	<div class="row marketing">
+		    <div class="col-md-12">
+		      <h1>Annul Authorization</h1>
+		      <p>
+		     	After a successful customer payment process (in the payment window), the transaction can get the status authorized. Here you can annul that authorization
+		     </p> 
+		     <p>
+		     	Before Annul Authorization can take place the following the following must have occurred:
+		     	<ol>
+		     		<li>
+		     			An order must have been <a href="?service=create-and-init">created and payment initialized</a>
+		     		</li>
+		     		<li>Customer must have paid using credit card or other payment method that results in a transaction with the status authorized</li>
+		     	</ol>
+		     </p>
+		     <p>
+		     	<em>
+		     		Note if you get error message from the API server, the transaction might already have been finalized. 
+		     		Go to <a href="?service=create-and-init" >create order and initialize payment.</a>
+		     	</em>
+		     </p>
+		    </div>
+		</div>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<h4>1. Annul Authorization</h4>
+    			<p>
+    				<a href="javascript:void(0)" id="annulAuthorizationButton" data-loading-text="Loading..." class="btn btn-sm btn-primary" role="button">Annul authorization</a>
+    			</p>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-12" id="annulAuthorizationResult">
+    			<p>This code will be used:</p>
+    			{code-snippet}{snippet-file:annul-authorization}{/code-snippet}
+    		</div>
+    	</div>
+    </div>
+   	<div class="col-md-4">{variables-box}</div>
+</div>

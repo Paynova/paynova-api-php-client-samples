@@ -1,0 +1,18 @@
+//$responseRefundPayment from above
+
+//Get the Status object
+$responseRefundPayment->status();
+
+$responseRefundPayment->totalAmountRefunded()
+
+$responseRefundPayment->canRefundAgain();
+
+//Paynova's unique transaction id for the refund.
+$responseRefundPayment->transactionId();
+
+//For payment methods which are batched nightly (for example, credit cards), 
+//the id of the settlement batch this transaction will be placed in will be returned in this field.
+$responseRefundPayment->batchId()
+
+...
+...

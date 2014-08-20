@@ -1,0 +1,16 @@
+$requestRefundPayment = RequestRefundPayment::factory(array(
+		"orderId"=>"{orderId}",
+		"transactionId"=>"{transactionId}",
+		"totalAmount"=>"{amount}"
+));
+
+$responseRefundPayment = $requestRefundPayment->request();
+
+if($responseRefundPayment->status()->isSuccess()==1) {
+	//SUCCESS
+}else{
+	/*
+     * Use the status object to get the errors
+     * $responseRefundPayment->status();
+    */
+}

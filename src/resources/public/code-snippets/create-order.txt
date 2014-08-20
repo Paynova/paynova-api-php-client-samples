@@ -1,0 +1,36 @@
+PaynovaConfig::endpoint(	$settings->getProperty("endpoint")			);
+PaynovaConfig::username(	$settings->getProperty("username")			);
+PaynovaConfig::password(	$settings->getProperty("password")			);
+
+$requestObj = RequestCreateOrder::factory(
+	array(
+		"orderNumber"=>"{orderNumber}",//Merchant order nr
+		"currencyCode" =>"SEK",
+		"totalAmount" => 100.00,
+		"lineItems" => array(
+			array(
+				"id" => "foo-123",
+				"articleNumber" => "foo-123",
+				"name" => "Foo line item name",
+				"quantity" => 1,
+				"unitMeasure" =>"st.",
+				"unitAmountExcludingTax" => 80.00,
+				"taxPercent" => 25,
+				"totalLineTaxAmount" =>20.00,
+				"totalLineAmount" => 100.00,
+			)
+		)
+	)
+);
+
+$createOrderResponse = $requestObj->request();
+$status = $createOrderResponse->getHttpEvent()->responseBody();
+$orderId = "";
+if($createOrderResponse->status()->isSuccess()==1) {
+	//SUCCESS - continue with initialize payment
+}else{
+	/*
+     * Use the status object to get the errors
+     * $initResponse->status();
+    */
+}

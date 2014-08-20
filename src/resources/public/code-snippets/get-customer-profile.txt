@@ -1,0 +1,17 @@
+... set the Paynova credentials
+
+$getCustomerProfileRequest = RequestGetCustomerProfile::factory(array(
+	"profileId"=>"{profileId}"
+));
+
+
+$getCustomerProfileResponse = $getCustomerProfileRequest->request();
+
+if($getCustomerProfileResponse->status()->isSuccess()==1) {
+	//SUCCESS
+}else{
+	/*
+     * Use the status object to get the errors
+     * $getCustomerProfileResponse->status();
+    */
+}

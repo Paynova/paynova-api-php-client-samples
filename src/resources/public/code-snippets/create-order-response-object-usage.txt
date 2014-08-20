@@ -1,0 +1,7 @@
+//$createOrderResponse is of Type ResponseCreateOrder
+
+//The status object
+$createOrderResponse->status();
+	
+//The API returned orderId
+$createOrderResponse->orderId() 

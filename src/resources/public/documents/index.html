@@ -1,0 +1,73 @@
+<div class="jumbotron">
+    <h1>Paynova API PHP Client</h1>
+    <p class="lead">Sample site</p>
+</div>
+<div class="row marketing">
+	<div class="col-lg-12">
+		
+	</div>
+</div>
+<div class="row marketing">
+    <div class="col-lg-12">
+      <h2>1 Edit the properties file</h2>
+      <p>For this sample site to work you need to contact Paynova support to get URL, username and password to the test enviroment. Then edit the{code-snippet}paynova-samples.properties{/code-snippet}</p>
+    </div>
+     <div class="col-lg-12">
+      <h2>2 callback-store-file.txt</h2>
+      <p>Make sure that {code-snippet}src/resources/callback-store-file.txt{/code-snippet} is writable by the webserver to be able to store Event Hook Notifications</p>
+    </div>
+</div>
+<div class="row marketing">
+    <div class="col-lg-12">      
+      <h2>3 Starting point</h2>
+      <p>Start by <a href="?service=create-and-init">Creating an order and then Initialize Payment</a>. Then explore the other services.</p>
+    </div>
+</div>
+<div class="row marketing">
+    <div class="col-lg-12">
+      <h2>4 Sample Code</h2>
+      <p>All sample pages shows code. If you want to take a look at the real sample code take a look at classes in: {code-snippet}src/classes/document{/code-snippet}</p>
+    </div>
+</div>
+<div class="row marketing">&nbsp;</div>
+  <div class="row marketing">
+    <div class="col-lg-6">
+      <h4>Create Order & Initialize Payment</h4>
+      <p>
+      	Create Order to get an orderId and then Initialize Payment to get an URL to redirect the user to the payment window
+      	<p><a class="btn btn-sm btn-primary" href="?service=create-and-init" role="button">See code and try</a></p>
+      </p>
+	<p>&nbsp;</p>
+      <h4>Finalize Authorization</h4>
+      <p>
+      	After a successful customer payment process (in the payment window), the transaction gets authorized and now needs to be finalized
+      	<p><a class="btn btn-sm btn-primary" href="?service=finalize-authorization" role="button">See code and try</a></p>
+      </p>
+<p>&nbsp;</p>
+      <h4>Annul Authorization</h4>
+      <p>
+      	After a successful customer payment process (in the payment window), the transaction gets authorized, if you want you can annul that authorization
+      	<p><a class="btn btn-sm btn-primary" href="?service=annul-authorization" role="button">See code and try</a></p>
+      </p>
+    </div>
+
+    <div class="col-lg-6">
+		<h4>Refund Payment</h4>
+          <p>
+          	If a payment is in completed state, the payment can be refunded.
+          	<p><a class="btn btn-sm btn-primary" href="?service=refund-payment" role="button">See code and try</a></p>
+          </p>
+          <p>&nbsp;</p>
+		<h4>Get Customer Profile</h4>
+          <p>
+          	If a customer have ticket the box "Save my card" in the payment process then a profile will be created an can be retreived.
+          	<p><a class="btn btn-sm btn-primary" href="?service=get-customer-profile" role="button">See code and try</a></p>
+          </p>
+          <p>&nbsp;</p>
+         <h4>Remove Customer Profile/Card</h4>
+          <p>
+          	If a customer have ticket the box "Save my card" in the payment process, then a card or the complete profile can be removed.
+          	<p><a class="btn btn-sm btn-primary" href="?service=remove-customer-profile-card" role="button">See code and try</a></p>
+          </p>
+	</div>
+  </div>

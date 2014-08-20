@@ -1,0 +1,13 @@
+.DS_Store
+.settings/
+.buildpath
+.project
+vendor
+*.md.html
+README-old.md
+*~
+local-config.php
+composer.phar
+composer.lock
+apache-errors-log.txt
+apache-access-log.txt

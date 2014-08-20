@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-8">
+    	<div class="row marketing">
+		    <div class="col-md-12">
+		      <h1>Refund Payment</h1>
+		      <p>
+		     	The Refund Payment service is used to refund a Payment within Paynova's system.
+		     <p>
+		     	Before Refund Payment can take place the following must have occurred:
+		     	<ol>
+		     		<li>
+		     			An order must have been <a href="?service=create-and-init">created and payment initialized</a>
+		     		</li>
+		     		<li>Customer must have paid</li>
+		     		<li>
+		     			The payment must be in a completed state. If credit card was used as payment method, <a href="?service=finalize-authorization">Finalize Authorization</a> have to be called
+		     		</li>
+		     	</ol>
+		     </p>
+		     <p>
+		     	<em>
+		     		Note if you get error message from the API server, the transaction might already have been refunded. 
+		     		Go to <a href="?service=create-and-init">create order and initialize payment.</a>
+		     	</em>
+		     </p>
+		    </div>
+		</div>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<p>
+    				<a href="javascript:void(0)" id="refundPaymentButton" data-loading-text="Loading..." class="btn btn-sm btn-primary" role="button">Refund payment</a>
+    			</p>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-12" id="refundPaymentResult">
+    			<p>This code will be used:</p>
+    			{code-snippet}{snippet-file:refund-payment}{/code-snippet}
+    		</div>
+    	</div>
+    </div>
+   	<div class="col-md-4">{variables-box}</div>
+</div>

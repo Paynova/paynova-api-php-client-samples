@@ -1,0 +1,8 @@
+//$initializePaymentResponse from above
+
+//The status object
+$initializePaymentResponse->status();
+	
+//The API returned sessionId and url
+$initializePaymentResponse->sessionId(); 
+$initializePaymentResponse->url();	

@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="col-md-8">
+    	<div class="row marketing">
+		    <div class="col-md-12">
+		      <h1>Finalize Authorization</h1>
+		      <p>
+		     	After a successful customer payment process (in the payment window), the transaction gets authorized and now needs to be finalized.
+		     	The Finalize Authorization service is used to finalize all or part of an authorization. Depending on the payment method used to generate 
+		     	the authorization, this service has different effects. See the Paynova API documentation for more information.
+		     </p> 
+		     <p>
+		     	Before Finalize Authorization can take place the following must have occurred:
+		     	<ol>
+		     		<li>
+		     			An order must have been <a href="?service=create-and-init">created and payment initialized</a>
+		     		</li>
+		     		<li>Customer must have paid using credit card or using other payment method that results in a transaction that needs to be finalized</li>
+		     	</ol>
+		     </p>
+		     <p>
+		     	<em>
+		     		Note if you get error message from the API server, the transaction might already have been finalized. 
+		     		Go to <a href="?service=create-and-init">create order and initialize payment.</a>
+		     	</em>
+		     </p>
+		    </div>
+		</div>
+    	<div class="row">
+    		<div class="col-md-12">
+    			<p>
+    				<a href="javascript:void(0)" id="finalizeAuthorizationButton" data-loading-text="Loading..." class="btn btn-sm btn-primary" role="button">Finalize authorization</a>
+    			</p>
+    		</div>
+    	</div>
+    	<div class="row">
+    		<div class="col-md-12" id="finalizeAuthorizationResult">
+    			<p>This code will be used:</p>
+    			{code-snippet}{snippet-file:finalize-authorization}{/code-snippet}
+    		</div>
+    	</div>
+    </div>
+   	<div class="col-md-4">{variables-box}</div>
+</div>

@@ -1,0 +1,19 @@
+... set the Paynova credentials
+
+$finalizeAuthorizationRequest = RequestFinalizeAuthorization::factory(array(
+	"orderId"=>"{orderId}",
+	"transactionId"=>"{transactionId}",
+	"totalAmount"=>"{amount}"
+));
+
+
+$finalizeAuthorizationResponse = $finalizeAuthorizationRequest->request();
+
+if($finalizeAuthorizationResponse->status()->isSuccess()==1) {
+	//SUCCESS
+}else{
+	/*
+     * Use the status object to get the errors
+     * $finalizeAuthorizationResponse->status();
+    */
+}

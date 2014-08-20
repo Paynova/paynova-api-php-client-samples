@@ -1,0 +1,14 @@
+//$finalizeAuthorizationResponse from above
+
+//Get the Status object
+$finalizeAuthorizationResponse->status();
+
+//Can Finalize Authorization be called again with the same transactionId
+$finalizeAuthorizationResponse->canFinalizeAgain();
+
+
+//Get the batchId
+$finalizeAuthorizationResponse->batchId()
+
+...
+...

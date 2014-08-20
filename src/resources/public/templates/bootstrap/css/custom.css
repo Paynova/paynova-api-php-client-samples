@@ -1,0 +1,47 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.theme-dropdown .dropdown-menu {
+  position: static;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.theme-showcase > p > .btn {
+  margin: 5px 0;
+}
+
+.variables td, .variables th, .variables button {
+	font-size:0.8em;
+}
+
+.affix-bottom, .affix, .affix-top {
+    width: 400px;
+}
+iframe{
+	border:none;
+	display:none;
+}
+.variables .variableBox {
+	height:65px;
+	overflow:auto;
+	margin:2px 0px;
+	padding:5px 0px;
+	border-top:1px solid #006666;
+}
+.navbar-brand{
+	font-size:1.1em;
+}
+.nav > li > a {
+	font-size:0.9em;
+	padding-left:6px;
+	padding-right:6px;
+}
+p.bg-success, p.bg-warning{
+	padding:15px;
+}
+.bg-warning {
+    background-color: #f00;
+}
