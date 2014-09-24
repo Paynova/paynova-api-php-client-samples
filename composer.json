@@ -15,6 +15,6 @@
 	},
 	"require" : {
 		"php" : ">=5.3",
-		"paynova/paynova_php" : "v2.0.0"
+		"paynova/paynova_php" : "v2.0.1"
 	}
 }
